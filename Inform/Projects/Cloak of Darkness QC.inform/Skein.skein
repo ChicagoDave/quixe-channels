@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x00204008" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x00204008"/>
+  <item nodeId="node-0x00204008">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">** Prologue Channel ON **&#x000A;&#x000A;Hurrying through the rainswept November night, you're glad to see the bright lights of the Opera House. It's surprising that there aren't more people about but, hey, what do you expect in a cheap demo game...?&#x000A;** Main Channel ON **&#x000A;Cloak of Darkness QC, A basic IF demonstration by David Cornelson&#x000A;Copyright &#x00A9; 2015 by David Cornelson&#x000A;Release 1 / Serial number 150419 / Inform 7 Build 6L38 (I6 lib/v6.33 lib 6/12N SD)&#x000A;&#x000A;You are standing in a spacious hall, splendidly decorated in red and gold, with glittering chandeliers overhead. The entrance from the street is to the north, and there are doorways south and west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x02675DF0"/>
+      <child nodeId="node-0x02684FB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02675DF0">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">You are standing in a spacious hall, splendidly decorated in red and gold, with glittering chandeliers overhead. The entrance from the street is to the north, and there are doorways south and west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267DFB8"/>
+      <child nodeId="node-0x02685568"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267DFB8">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:&#x000A;  a velvet cloak (being worn)&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267E0A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267E0A0">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267E190"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267E190">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Blundering around in the dark isn't a good idea!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267E280"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267E280">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">In the dark? You could easily disturb something.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267ECA8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267ECA8">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">You are standing in a spacious hall, splendidly decorated in red and gold, with glittering chandeliers overhead. The entrance from the street is to the north, and there are doorways south and west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267EE38"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267EE38">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The walls of this small room were clearly once lined with hooks, though now only one remains. The exit is a door to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267F7B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267F7B8">
+    <command xml:space="preserve">put cloak on hook</command>
+    <result xml:space="preserve">(first taking it off)&#x000A;You put the velvet cloak on the small brass hook.&#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267F828"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267F828">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267FA48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267FA48">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You are standing in a spacious hall, splendidly decorated in red and gold, with glittering chandeliers overhead. The entrance from the street is to the north, and there are doorways south and west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267FAB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267FAB8">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The bar, much rougher than you'd have guessed after the opulence of the foyer to the north, is completely empty. There seems to be some sort of message scrawled in the sawdust on the floor.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0267FB28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0267FB28">
+    <command xml:space="preserve">read message</command>
+    <result xml:space="preserve">The message has been carelessly trampled, making it difficult to read. You can just distinguish the words...&#x000A;&#x000A;&#x000A;&#x000A;    *** You have lost ***&#x000A;&#x000A;&#x000A;In that game you scored 1 out of a possible 2, in 12 turns.&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x026851E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x026851E8">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Hurrying through the rainswept November night, you're glad to see the bright lights of the Opera House. It's surprising that there aren't more people about but, hey, what do you expect in a cheap demo game...?&#x000A;&#x000A;Cloak of Darkness QC&#x000A;A basic IF demonstration. by David Cornelson&#x000A;Release 1 / Serial number 150419 / Inform 7 build 6L38 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;You are standing in a spacious hall, splendidly decorated in red and gold, with glittering chandeliers overhead. The entrance from the street is to the north, and there are doorways south and west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02684E68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02684E68">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The walls of this small room were clearly once lined with hooks, though now only one remains. The exit is a door to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x026854F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x026854F8">
+    <command xml:space="preserve">put cloak on hook</command>
+    <result xml:space="preserve">(first taking it off)&#x000A;You put the velvet cloak on the small brass hook.&#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02685178"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02685178">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You are standing in a spacious hall, splendidly decorated in red and gold, with glittering chandeliers overhead. The entrance from the street is to the north, and there are doorways south and west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02684F48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02684F48">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The bar, much rougher than you'd have guessed after the opulence of the foyer to the north, is completely empty. There seems to be some sort of message scrawled in the sawdust on the floor.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02685338"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02685338">
+    <command xml:space="preserve">read message</command>
+    <result xml:space="preserve">The message, neatly marked in the sawdust, reads...&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;In that game you scored 2 out of a possible 2, in 5 turns.&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02685568">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The walls of this small room were clearly once lined with hooks, though now only one remains. The exit is a door to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02684ED8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02684ED8">
+    <command xml:space="preserve">put cloak on hook</command>
+    <result xml:space="preserve">(first taking it off)&#x000A;You put the velvet cloak on the small brass hook.&#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02685258"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02685258">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Are you sure you want to restart?</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02685028"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02685028">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">Hurrying through the rainswept November night, you're glad to see the bright lights of the Opera House. It's surprising that there aren't more people about but, hey, what do you expect in a cheap demo game...?&#x000A;&#x000A;Cloak of Darkness QC&#x000A;A basic IF demonstration. by David Cornelson&#x000A;Release 1 / Serial number 150419 / Inform 7 build 6L38 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;You are standing in a spacious hall, splendidly decorated in red and gold, with glittering chandeliers overhead. The entrance from the street is to the north, and there are doorways south and west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02685488"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02685488">
+    <command xml:space="preserve">trace 5</command>
+    <result xml:space="preserve">[Parser tracing set to level 5.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x026855D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x026855D8">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">[ "w" w ]&#x000A;   [NounDomain called at word 1&#x000A;   seeking definite object&#x000A;    Trying the north (588410) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the northeast (588442) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the northwest (588474) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the south (588506) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the southeast (588538) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the southwest (588570) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the east (588602) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the west (588634) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 1 Pass 2: 1 Pass 3: 1&#x000A;    Matched (1)&#x000A;    Trying the up (588666) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the down (588698) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the inside (588730) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the outside (588762) at word 1&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;   [ND made 1 matches]&#x000A;&#x000A;The walls of this small room were clearly once lined with hooks, though now only one remains. The exit is a door to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x026853A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x026853A8">
+    <command xml:space="preserve">put cloak on hook</command>
+    <result xml:space="preserve">[ "put" put / "cloak" cloak / "on" on / "hook" hook ]&#x000A;[Parsing for the verb 'put' (6 lines)]&#x000A;&#x000A;[line 0 * 'on' held -&gt; Wear]&#x000A; [line 0 token 1 word 2 : 'on']&#x000A;  [token resulted in failure with error type 1]&#x000A;&#x000A;[line 1 * held 'on' -&gt; Wear]&#x000A;[line rejected for not ending with correct preposition]&#x000A;&#x000A;[line 2 * 'down' multiheld -&gt; Drop]&#x000A; [line 2 token 1 word 2 : 'down']&#x000A;  [token resulted in failure with error type 1]&#x000A;&#x000A;[line 3 * multiheld 'down' -&gt; Drop]&#x000A;[line rejected for not ending with correct preposition]&#x000A;&#x000A;[line 4 * multiexcept 'in' / 'inside' / 'into' noun -&gt; Insert]&#x000A; [Trying look-ahead]&#x000A; [Look-ahead aborted: prepositions don't match]&#x000A;&#x000A;[line 5 * multiexcept 'on' / 'onto' noun -&gt; PutOn]&#x000A; [Trying look-ahead]&#x000A;   [NounDomain called at word 4&#x000A;   seeking definite object&#x000A;    Trying the north (588410) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the northeast (588442) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the northwest (588474) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the south (588506) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the southeast (588538) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the southwest (588570) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the east (588602) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the west (588634) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the up (588666) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the down (588698) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the inside (588730) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the outside (588762) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying yourself (588794) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the small brass hook (588922) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 1 Pass 2: 1 Pass 3: 1&#x000A;    Matched (1)&#x000A;    Trying the velvet cloak (588826) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;   [ND made 1 matches]&#x000A; [Advanced to "noun" token: the small brass hook]&#x000A; [line 5 token 1 word 2 : multiexcept]&#x000A;  [Object list from word 2]&#x000A;  [Calling NounDomain on location and actor]&#x000A;   [NounDomain called at word 2&#x000A;   seeking definite object&#x000A;    Trying the north (588410) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the northeast (588442) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the northwest (588474) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the south (588506) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the southeast (588538) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the southwest (588570) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the east (588602) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the west (588634) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the up (588666) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the down (588698) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the inside (588730) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the outside (588762) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying yourself (588794) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the small brass hook (588922) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the velvet cloak (588826) at word 2&#x000A;Parse_name called&#x000A;Pass 1: 1 Pass 2: 1 Pass 3: 1&#x000A;    Matched (1)&#x000A;   [ND made 1 matches]&#x000A;  [ND returned the velvet cloak]&#x000A;  [token resulted in success]&#x000A; [line 5 token 2 word 3 : 'on']&#x000A;  [token resulted in success]&#x000A; [line 5 token 3 word 4 : 'onto']&#x000A;  [token resulted in success]&#x000A; [line 5 token 4 word 4 : noun]&#x000A;  [Object list from word 4]&#x000A;  [Calling NounDomain on location and actor]&#x000A;   [NounDomain called at word 4&#x000A;   seeking definite object&#x000A;    Trying the north (588410) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the northeast (588442) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the northwest (588474) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the south (588506) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the southeast (588538) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the southwest (588570) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the east (588602) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the west (588634) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the up (588666) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the down (588698) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the inside (588730) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the outside (588762) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying yourself (588794) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;    Trying the small brass hook (588922) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 1 Pass 2: 1 Pass 3: 1&#x000A;    Matched (1)&#x000A;    Trying the velvet cloak (588826) at word 4&#x000A;Parse_name called&#x000A;Pass 1: 0 Pass 2: 0 Pass 3: 0&#x000A;   [ND made 1 matches]&#x000A;  [ND returned the small brass hook]&#x000A;  [token resulted in success]&#x000A; [line 5 token 5 word 5 : END]&#x000A;[Line successfully parsed]&#x000A;&#x000A;(first taking it off)&#x000A;You put the velvet cloak on the small brass hook.&#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02684FB8">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">The walls of this small room were clearly once lined with hooks, though now only one remains. The exit is a door to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02685098"/>
+      <child nodeId="node-0x02685418"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02685098">
+    <command xml:space="preserve">hang cloak</command>
+    <result xml:space="preserve">(on the velvet cloak)&#x000A;You can't put something on top of itself.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02685108"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02685108">
+    <command xml:space="preserve">hang cloak on hook</command>
+    <result xml:space="preserve">(first taking it off)&#x000A;You put the velvet cloak on the small brass hook.&#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02685418">
+    <command xml:space="preserve">put cloak on hook</command>
+    <result xml:space="preserve">(first taking it off)&#x000A;** Main Channel ON **You put the velvet cloak on the small brass hook.&#x000A;&#x000A;[Your score has just gone up by one point.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x026852C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x026852C8">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You are standing in a spacious hall, splendidly decorated in red and gold, with glittering chandeliers overhead. The entrance from the street is to the north, and there are doorways south and west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0268B0A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0268B0A8">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The bar, much rougher than you'd have guessed after the opulence of the foyer to the north, is completely empty. There seems to be some sort of message scrawled in the sawdust on the floor.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0268A7E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0268A7E8">
+    <command xml:space="preserve">read message</command>
+    <result xml:space="preserve">** score message channel ON **&#x000A;The message, neatly marked in the sawdust, reads...&#x000A;** Main Channel ON **&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;In that game you scored 2 out of a possible 2, in 5 turns.&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;** Prompt Channel ON **&#x000A;&gt; ** Main Channel ON **</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

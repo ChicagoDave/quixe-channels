@@ -1,4 +1,4 @@
-Version 1/041915 of Quixe Channels Core (for Glulx only) by David Cornelson begins here.
+Version 1/050515 of Quixe Channels Core (for Glulx only) by David Cornelson begins here.
 
 Chapter 1 - FyreVM-specific constants and definitions
 
@@ -38,16 +38,9 @@ Constant FYC_SCORE = ('S' * $1000000) + ('C' * $10000) + ('O' * $100) + 'R';			!
 Constant FYC_TIME = ('T' * $1000000) + ('I' * $10000) + ('M' * $100) + 'E';			! TIME
 Constant FYC_DEATH = ('D' * $1000000) + ('E' * $10000) + ('A' * $100) + 'D';			! DEAD
 Constant FYC_ENDGAME = ('E' * $1000000) + ('N' * $10000) + ('D' * $100) + 'G';			! ENDG
-
-! Extended default channels for FY_CHANNEL
-Constant FYC_TITLE = ('T' * $1000000) + ('I' * $10000) + ('T' * $100) + 'L';			! TITL
-Constant FYC_CREDITS = ('C' * $1000000) + ('R' * $10000) + ('E' * $100) + 'D';			! CRED
-Constant FYC_PROLOGUE = ('P' * $1000000) + ('L' * $10000) + ('O' * $100) + 'G';			! PLOG
 Constant FYC_TURN = ('T' * $1000000) + ('U' * $10000) + ('R' * $100) + 'N';			! TURN
-Constant FYC_HINT = ('H' * $1000000) + ('I' * $10000) + ('N' * $100) + 'T';			! HINT
-Constant FYC_HELP = ('H' * $1000000) + ('E' * $10000) + ('L' * $100) + 'P';			! HELP
-Constant FYC_VERSION = ('V' * $1000000) + ('R' * $10000) + ('S' * $100) + 'N';			! VRSN
-Constant FYC_ERROR = ('E' * $1000000) + ('R' * $10000) + ('O' * $100) + 'R';			! EROR
+Constant FYC_STORYINFO = ('I' * $1000000) + ('N' * $10000) + ('F' * $100) + 'O';			! INFO
+Constant FYC_SCORENOTIFY = ('S' * $1000000) + ('N' * $10000) + ('O' * $100) + 'T';			! SNOT
 
 ! Slots for FY_SETVENEER.
 Constant FYV_Z__Region = 1;
@@ -1209,6 +1202,76 @@ Include (-
 ];
 -) instead of "Print Obituary Headline Rule" in "OrderOfPlay.i6t".
 
+[ Remove newlines at beginning of story ]
+
+Include
+(-
+[ VIRTUAL_MACHINE_STARTUP_R;
+	CarryOutActivity(STARTING_VIRTUAL_MACHINE_ACT);
+	VM_Initialise();
+	rfalse;
+];
+-) instead of "Virtual Machine Startup Rule" in "OrderOfPlay.i6t".
+
+[ Story Info Definitions ]
+
+To say story serial number: (- PrintSerialNumber(); -).
+
+Include (-
+[ PrintSerialNumber i;
+	for (i=0 : i<6 : i++) print (char) ROM_GAMESERIAL->i;
+];
+-).
+
+To say I7 version number: (- print (PrintI6Text) NI_BUILD_COUNT; -).
+To say I6 version number: (- print inversion; -);
+To say I7 library number: (- print (PrintI6Text) LibRelease; -);
+To say I6 library number: (- inversion; -);
+To say strict mode: (- CheckStrictMode(); -);
+
+Include (-
+[ CheckStrictMode;
+	#Ifdef STRICT_MODE;
+	print "S";
+	#Endif; ! STRICT_MODE;
+];
+-).
+
+To say debug mode: (- CheckDebugMode(); -);
+
+Include (-
+[ CheckDebugMode;
+	#Ifdef DEBUG;
+	print "D";
+	#Endif; ! DEBUG;
+];
+-).
+
+Section 6 - Score Notification
+
+Include (-
+[ NotifyTheScore d;
+#Iftrue USE_SCORING ~= 0;
+	if (notify_mode == 1) {
+		if (is_fyrevm) {
+			d = score-last_score;
+			FyreCall(FY_CHANNEL, FYC_SCORENOTIFY);
+			print d;
+			FyreCall(FY_CHANNEL, FYC_MAIN);
+		} else {
+			DivideParagraphPoint();
+			VM_Style(NOTE_VMSTY);
+			d = score-last_score;
+			if (d > 0) { ANNOUNCE_SCORE_RM('D', d); }
+			else if (d < 0) { ANNOUNCE_SCORE_RM('E', -d); }
+			new_line;
+			VM_Style(NORMAL_VMSTY);
+		}
+	}
+#Endif;
+];
+-)  instead of "Score Notification" in "Printing.i6t".
+
 Chapter 3 - Standard Rules replacements
 
 This is the direct the final prompt to the prompt channel rule:
@@ -1249,38 +1312,16 @@ To Select the Time Channel:
 To Select the Death Channel:
 	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_DEATH); -).
 
-[ Additional Channels... ]
-
-To Select the Title Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_TITLE); -).
-
-To Select the Credits Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_CREDITS); -).
-
-To Select the Prologue Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_PROLOGUE); -).
-
 To Select the Turn Channel:
 	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_TURN); -).
 
-To Select the Hint Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_HINT); -).
+To Select the Story Info Channel:
+	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_STORYINFO); -);
 
-To Select the Help Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_HELP); -).
+To Select the Score Notification Channel:
+	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_SCORENOTIFY); -);
 
-To Select the Error Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_ERROR); -).
-
-To Select the Version Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_VERSION); -).
-
-To Set the Version to (T - text):
-	Select the Version Channel;
-	say T;
-	Select the Main Channel.
-
-Section 1b - Required Channels - Nor For Release
+Section 1b - Required Channels - Not For Release
 
 To Select the Main Channel:
 	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_MAIN); else print "** Main Channel ON **"; -).
@@ -1305,41 +1346,26 @@ To Select the Time Channel:
 To Select the Death Channel:
 	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_DEATH); else print "** Death Channel ON **"; -).
 
-[ Additional channels... ]
-
-To Select the Title Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_TITLE); else print "** Title Channel ON **";-).
-
-To Select the Credits Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_CREDITS); else print "** Credits Channel ON **"; -).
-
-To Select the Prologue Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_PROLOGUE); else print "** Prologue Channel ON **"; -).
-
 To Select the Turn Channel:
 	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_TURN); else print "** Turn Channel ON **"; -).
 
-To Select the Hint Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_HINT); else print "** Hint Channel ON **"; -).
+To Select the Story Info Channel:
+	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_STORYINFO); else print "** Story Info channel ON **";  -);
 
-To Select the Help Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_HELP); else print "** Help Channel ON **"; -).
-
-To Select the Error Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_ERROR); else print "** Error Channel ON **"; -).
-
-To Select the Version Channel:
-	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_VERSION); else print "** Version Channel ON **"; -);
-	
-To Set the Version to (T - text):
-	Select the Version Channel;
-	say T;
-	Select the Main Channel.
+To Select the Score Notification Channel:
+	(- if (is_fyrevm) FyreCall(FY_CHANNEL, FYC_SCORENOTIFY); else print "** Score Notification channel ON **";  -);
 
 Chapter 5 - Transition Requested
 
 To Request Transition:
 	(- if (is_fyrevm) FyreCall(FY_REQUEST_TRANSITION); -);
+
+Chapter 6 - Story Info
+
+Every turn when outputting channels (this is the story info channel rule):
+	select the story info channel;
+	say "{ storyTitle: [quotation mark][story title][quotation mark], storyHeadline: [quotation mark][story headline][quotation mark], storyAuthor: [quotation mark][story author][quotation mark], storyCreationYear: [quotation mark][story creation year][quotation mark], releaseNumber: [quotation mark][release number][quotation mark], serialNumber: [quotation mark][story serial number][quotation mark], inform7Build: [quotation mark][I7 version number][quotation mark], inform6Library: [quotation mark][I6 library number][quotation mark], inform7Library: [quotation mark][I7 library number][quotation mark], strictMode: [quotation mark][strict mode][quotation mark], debugMode: [quotation mark][debug mode][quotation mark] }";
+	select the main channel.
 
 Chapter 7 - Miscellany
 
@@ -1371,30 +1397,21 @@ The author can add any channel they wish using the following steps:
 	
 Required Channels:
 
-Main - The main channel is meant to handle the regular text window output.
+Main (MAIN) - The main channel is meant to handle the regular text window output.
 
-Prompt - The prompt channel defaults to the common ">" caret, but can be altered to be anything.
+Prompt (PRPT) - The prompt channel defaults to the common ">" caret, but can be altered to be anything.
 
-Location - The location channel contains the current location name.
+Location (LOCN) - The location channel contains the current location name.
 
-Score - The score channel contains, if any is provided, the current score of the game.
+Score (SCOR) - The score channel contains, if any is provided, the current score of the game.
 
-Time - The time channel contains the current number of turns or the current time.
+Time (TIME) - The time channel contains the current number of turns or the current time.
 
-Death - The death channel contains any output that happens after the player dies. This is separated from the main text so that the UI can handle it contextually.
+Death (DEAD) - The death channel contains any output that happens after the player dies. This is separated from the main text so that the UI can handle it contextually.
 
-Additional Channels:
+Turn (TURN) - The turn channel has the turn count, regardless if time is the primary timekeeping method.
 
-Title - The title channel can be used for identifying the title of the game.
+Story Info (INFO) - The story info channel contains JSON with all of the banner and general story information.
 
-Credits - The credits channel can be used for identifying the credits for the game.
+Score Notification (SNOT) - When scoring is used and the score changes, the change value (up or down) will be posted to this channel.
 
-Prologue - The prologue channel can be used for the output at the beginning of a game.
-
-Turn - The turn channel has the turn count, regardless if time is the primary timekeeping method.
-
-Hint - The hint channel can be used to send hint information to the user interface. Textfyre provides a sample implementation in FyreVM Hint Channel Support by Textfyre.
-
-Help - The help channel can be used to send general help information to the user interface. Textfyre provides a sample implementation in FyreVM Help Channel Support by Textfyre.
-
-Version - The version channel is a text based version descriptor used in testing.
